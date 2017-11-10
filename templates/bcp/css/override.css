@@ -72,6 +72,15 @@
 
 }
 
+
+.pausepage-banner{
+  background: url(../img/banner/pausepage.jpg) no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
 /*Gradients*/
 
 .grad-w-t{
@@ -102,13 +111,22 @@
   background: linear-gradient(rgba(0,0,0,0), white); /* Standard syntax */
 }
 
+.grad-t-w-small{
+  height: 100vh;
+  background: rgba(0,0,0,0); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(rgba(0,0,0,0), white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(0,0,0,0), white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(0,0,0,0), white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(0,0,0,0), white); /* Standard syntax */
+}
+
 .abs-bg{
-  background: #162c9a; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#162c9a,rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#162c9a,rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#162c9a,rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#162c9a,rgba(0,0,0,0)); /* Standard syntax */
-  height: 300px;
+  background: black; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(black,rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(black,rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(black,rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(black,rgba(0,0,0,0)); /* Standard syntax */
+  height: 350px;
 
 
 }
@@ -624,6 +642,45 @@
 .loaded-item{
   opacity: 1;
 }
+
+/* masonry : https://codepen.io/desandro/pen/bdgRzg*/
+
+/* ---- grid ---- */
+
+.grid {
+  background: #DDD;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  width: 100%;
+}
+
+.overlay-x{
+  position: absolute; z-index: 9999; background : rgba(22, 44, 154, 0.8); background-size: cover; width: 100%; height: 100%; opacity: 0;
+}
+.grid-item:hover .overlay-x{
+  opacity: 1;
+}
+
 /*Media Queries*/
 
 

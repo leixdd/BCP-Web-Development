@@ -66,8 +66,8 @@ function time_elapsed_string($datetime, $full = false) {
 <section id="topHome">
     <div class="topBanner" style="">
         <div class="topBanner-overlay">
-
             <div class="grad-t-w"></div>
+
         </div>
     </div>
 </section>
@@ -145,11 +145,11 @@ function time_elapsed_string($datetime, $full = false) {
     </div>
 
           <div class="academe-text text-center hidden-xs" style="margin-top: 1%;">
-            College
+            College Programs
           </div>
 
           <div class="academe-text text-center visible-xs" style="margin-top: 1%; font-size: 12pt;">
-            College
+            College Programs
           </div>
 
 
@@ -351,65 +351,79 @@ function time_elapsed_string($datetime, $full = false) {
 </section>
 
 <section id="newsann">
-  <div id="news-bg">
-    <div class="topBanner-overlay" style="height: 65vh;">
-        <div class="abs-bg">
-          <div class="container">
-            <div class="row">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="title" style="padding-bottom: 2px; margin-top: 5%;">
+          <h1 style="font-family: Raleway-thin; font-size: 36pt;">Latest <b style="font-family: Raleway-smb; color: #162c9a">Updates</b></h1>
+      </div>
 
-              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: white;">
-                <h1 class="wow fadeInUp" style="color: white; font-family: Raleway-smb">|&nbsp;What's happening in BCP?</h1>
-                <h2 id="news-title-feat" style="color: white; font-family: Raleway-thin"></h2>
-                <p id="news-content-feat" style="font-family: Raleway-reg"></p>
-
-
+      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12" style="margin-bottom: 1%;">
+        <section class="widget widget_text">
+            <center>
+              <div class="textwidget text">
+                  <p class="sub-title-text text-center">Latest news and past events of BCP, <br /> Click <a href="<?=__BASE_URL__?>news"><b style="font-family: Raleway-smb; color: #162c9a">Here</b></a> for more news.</p>
               </div>
+            </center>
+        </section>
+      </div>
 
-            </div>
+      <div class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
+        <div id="news-bg">
+          <div class="topBanner-overlay" style="height: 65vh;">
+              <div class="abs-bg">
+                <div class="container">
+                  <div class="row">
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="color: white; padding-top: 3%">
+                      <h2 id="news-title-feat" style="color: white; font-family: Raleway-thin"></h2>
+                      <p id="news-content-feat" style="font-family: Raleway-reg"></p>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
           </div>
         </div>
+      </div>
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div id="owl-banner-carousel" class="owl-carousel owl-theme"  style="background: black;">
+          <!-- News Loop -->
+              <?php
+                  $n = new News();
+                  $news_data = $n->rt_topNews();
+                  if($news_data != null){
+              foreach ($news_data as $news) {
+                      $news_url = __BASE_URL__.'news/'.Encode_id($news['news_id']).'/';
+                      ?>
+
+                      <div class="item load-item" >
+                        <img id="news-img" src="<?= ($news['news_imagesurl']) == null ? __PATH_TEMPLATE__.'img/banner/empty.jpg' : $news['news_imagesurl'] ?>" alt="" class="img-responsive" style="width: 100%; height: 150px"/>
+                        <span id="news-author" hidden><?= $news['news_author'] ?></span>
+                        <span id="news-date" hidden><?= date("F j, Y",$news['news_date']); ?></span>
+                        <span id="news-title" hidden><?= $news['news_title'] ?></span>
+                        <span id="news-content" hidden><?= strip_tags(substr($news['news_content'], 0, 139))?>...</span>
+                        <span id="news-url" hidden><?=$news_url;?></span>
+                      </div>
+                      <?php
+                  }
+                  }
+
+              ?>
+          <!-- End news loop -->
+
+        </div>
+      </div>
+
     </div>
   </div>
-
-
-          <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-              <div id="owl-banner-carousel" class="owl-carousel owl-theme"  style="background: black;">
-                <!-- News Loop -->
-                    <?php
-                        $n = new News();
-                        $news_data = $n->rt_topNews();
-                        if($news_data != null){
-                    foreach ($news_data as $news) {
-                            $news_url = __BASE_URL__.'news/'.Encode_id($news['news_id']).'/';
-                            ?>
-
-                            <div class="item load-item" >
-                              <img id="news-img" src="<?= ($news['news_imagesurl']) == null ? __PATH_TEMPLATE__.'img/banner/empty.jpg' : $news['news_imagesurl'] ?>" alt="" class="img-responsive" style="width: 100%; height: 150px"/>
-                              <span id="news-author" hidden><?= $news['news_author'] ?></span>
-                              <span id="news-date" hidden><?= date("F j, Y",$news['news_date']); ?></span>
-                              <span id="news-title" hidden><?= $news['news_title'] ?></span>
-                              <span id="news-content" hidden><?= strip_tags(substr($news['news_content'], 0, 139))?>...</span>
-                              <span id="news-url" hidden><?=$news_url;?></span>
-                            </div>
-                            <?php
-                        }
-                        }
-
-                    ?>
-                <!-- End news loop -->
-
-              </div>
-            </div>
-          </div>
-
 </section>
 
 <div class="container-fluid">
 
   <div class="row">
-    <div class="col-lg-8 col-md-8 col-sm-8">
-      <div class="dark-primary-color" style="height: 10px;"></div>
+    <div class="col-lg-9 col-md-9 col-sm-9">
+      <!-- <div class="dark-primary-color" style="height: 10px;"></div>
       <div class="default-primary-color text-center">
           <div style="padding-top: 2%; padding-bottom: 2%">
               <h2 style="font-family: Raleway-reg; color: white;">
@@ -417,9 +431,11 @@ function time_elapsed_string($datetime, $full = false) {
               </h2>
               <small style="font-family: Raleway-thin; color: white;">Facebook current posts</small>
           </div>
-      </div>
+      </div> -->
       <div style="background: white">
-            <div class="list-group" style="overflow-y: scroll; height: 70vh;">
+            <div style="overflow-y: scroll; height: 100vh;">
+              <div class="grid">
+                <div class="grid-sizer">
                   <!-- News Loop -->
                       <?php
                           if($feed_item_count !== 0) {
@@ -459,7 +475,29 @@ function time_elapsed_string($datetime, $full = false) {
                                   $object_id = $obj['data'][$x]['object_id'];
 
                               ?>
-                                      <a href="<?= $link ?>" class="list-group-item">
+
+                              <div class="grid-item">
+                                <div class="overlay-x" style="padding: 10px">
+                                  <div style="padding: 10px; border: 2px solid white; height: 100%; color: white;">
+                                    BCP Update - <i class="fa fa-clock-o"></i>&nbsp;<?= $ago_value ?>
+                                    <br />
+                                    <br />
+                                    <?= strip_tags(substr($message, 0, 85)) ?> ...
+                                  </div>
+                                </div>
+                                <?php
+                                  if($type=="photo"){
+                                     echo "<img src='https://graph.facebook.com/{$object_id}/picture' />";
+                                  }else{
+                                    echo "<img src='".__PATH_TEMPLATE__.'img/banner/empty.jpg' ."' />";
+                                  }
+                                ?>
+
+
+                              </div>
+
+
+                                      <!-- <a href="<?= $link ?>" class="list-group-item">
 
                                         <h5 class="list-group-item-heading">
                                               BCP Update - <i class="fa fa-clock-o"></i>&nbsp;<?= $ago_value ?>
@@ -472,7 +510,9 @@ function time_elapsed_string($datetime, $full = false) {
                                                           echo "View on Facebook";
                                                       echo "</div>";
                                                    }else if($type=="photo"){
-                                                      echo "<img class='img-responsive' src='https://graph.facebook.com/{$object_id}/picture' />";
+                                                      echo "<center>
+                                                      <img src='https://graph.facebook.com/{$object_id}/picture' />
+                                                      </center>";
                                                    }else{}
 
                                                      echo "<div class='post-info'>";
@@ -489,7 +529,7 @@ function time_elapsed_string($datetime, $full = false) {
 
                                               ?>
                                         </small>
-                                      </a>
+                                      </a> -->
 
 
                               <?php
@@ -498,10 +538,12 @@ function time_elapsed_string($datetime, $full = false) {
                           }
                       ?>
                   <!-- End news loop -->
+                </div>
+              </div>
             </div>
       </div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4">
+    <div class="col-lg-3 col-md-3 col-sm-3">
         <div class="row">
             <div class="col-lg-12">
                 <div>

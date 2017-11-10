@@ -39,13 +39,7 @@
 
                                             </ul>
                                         </li>
-                                        <li><a href="#" class="ddsys">Facilities <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                            <ul>
-                                                <li><a href="<?=__BASE_URL__?>mv">MV Campus</a></li>
-                                                <li><a href="<?=__BASE_URL__?>bulacan">Bulacan Campus</a></li>
-                                                <li><a href="<?=__BASE_URL__?>main">Main Campus</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a class="ddsys" href="<?=__BASE_URL__?>facilities">Facilities</a></li>
                                     </ul>
                                 </nav>
                                 <!-- Nav End -->

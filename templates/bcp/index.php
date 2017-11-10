@@ -118,9 +118,13 @@ include('inc/template.functions.php');
 	<script type="text/javascript" src="<?=__PATH_TEMPLATE__?>js/modals.js"></script> <!-- Modal Jq -->
 
 <!--       Typed js  Animation  -->
-<script src="<?=__PATH_TEMPLATE__?>js/mb.js"></script>
-    <script src="<?=__PATH_TEMPLATE__?>js/typed.js"></script>
-    <script src="<?=__PATH_TEMPLATE__?>js/home.js"></script>
+	<script src="<?=__PATH_TEMPLATE__?>js/mb.js"></script>
+  <script src="<?=__PATH_TEMPLATE__?>js/typed.js"></script>
+  <script src="<?=__PATH_TEMPLATE__?>js/home.js"></script>
+	<script src="<?=__PATH_TEMPLATE__?>js/home.js"></script>
+	<script src="<?=__PATH_TEMPLATE__?>js/masonry.pkgd.min.js"></script>
+	<script src="<?=__PATH_TEMPLATE__?>js/imagesloaded.pkgd.min.js"></script>
+
     <!--      Typed js Animation end  -->
 
 	<!-- Scripts Js End -->

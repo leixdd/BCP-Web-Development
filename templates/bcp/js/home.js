@@ -19,7 +19,6 @@ function foo(){  }
 
 $("#owl-banner-carousel").owlCarousel({
 
-
   loop: true,
   dots: false,
   responsiveClass: true,
@@ -96,7 +95,6 @@ function panels_out(){
 }
 
 
-
 $(document).ready(function(){
 
             wow = new WOW({
@@ -120,14 +118,14 @@ $(document).ready(function(){
 
 
             $('#coll').click(function(){
-              $('.academe-text').text("College");
+              $('.academe-text').text("College Programs");
               removeAllSelected(false);
               $(this).addClass("academe-btn-active");
               $('#college-acad').fadeIn();
             });
 
             $('#shs').click(function(){
-              $('.academe-text').text("K to 12");
+              $('.academe-text').text("K to 12 Programs");
               removeAllSelected(false);
               $(this).addClass("academe-btn-active");
               $('#shs-acad').fadeIn();
@@ -141,7 +139,7 @@ $(document).ready(function(){
             });
 
             $('#tesda').click(function(){
-              $('.academe-text').text("Tesda");
+              $('.academe-text').text("Tesda Programs");
               removeAllSelected(false);
               $(this).addClass("academe-btn-active");
               $('#tesda-acad').fadeIn();``
@@ -149,14 +147,14 @@ $(document).ready(function(){
 
 
             $('#collxs').click(function(){
-              $('.academe-text').text("College");
+              $('.academe-text').text("College Programs");
               removeAllSelected(true);
               $(this).addClass("academe-btn-active");
               $('#college-acad').fadeIn();
             });
 
             $('#shsxs').click(function(){
-              $('.academe-text').text("K to 12");
+              $('.academe-text').text("K to 12 Programs");
               removeAllSelected(true);
               $(this).addClass("academe-btn-active");
               $('#shs-acad').fadeIn();
@@ -170,7 +168,7 @@ $(document).ready(function(){
             });
 
             $('#tesdaxs').click(function(){
-              $('.academe-text').text("Tesda");
+              $('.academe-text').text("Tesda Programs");
               removeAllSelected(true);
               $(this).addClass("academe-btn-active");
               $('#tesda-acad').fadeIn();
@@ -180,7 +178,7 @@ $(document).ready(function(){
 
             $.each($('.item'), function(){
               if(img === ''){
-                $('#news-bg').css({"background":"url(" + $(this).find('img').attr('src') + ") no-repeat center center fixed", "background-size":"cover"});
+                $('#news-bg').css({"background":"url(" + $(this).find('img').attr('src') + ") no-repeat center center", "background-size":"cover"});
                 $('#news-title-feat').text('#'+$(this).find('span')[2].innerText);
                 $('#news-content-feat').html($(this).find('span')[3].innerText + "<br /> <br/> <small> <i class='fa fa-user'>&nbsp;&nbsp;</i>" + $(this).find('span')[0].innerText + " &nbsp;|&nbsp; <i class='fa fa-clock-o'>&nbsp;&nbsp;</i>" + $(this).find('span')[1].innerText + " &nbsp;|&nbsp; <a class='btn btn-xs btn-primary' href='" + $(this).find('span')[4].innerText + "'>Read More</small>");
                 img = $(this).find('img').attr('src');
@@ -196,9 +194,9 @@ $(document).ready(function(){
                4: content
                5: url
             */
-            
+
             $('.item').click(function(){
-              $('#news-bg').css({"background":"url(" + $(this).find('img').attr('src') + ") no-repeat center center fixed", "background-size":"cover"});
+              $('#news-bg').css({"background":"url(" + $(this).find('img').attr('src') + ") no-repeat center center", "background-size":"cover"});
               $('#news-title-feat').text('#'+$(this).find('span')[2].innerText);
               $('#news-content-feat').html($(this).find('span')[3].innerText + "<br /> <br/> <small> <i class='fa fa-user'>&nbsp;&nbsp;</i>" + $(this).find('span')[0].innerText + " &nbsp;|&nbsp; <i class='fa fa-clock-o'>&nbsp;&nbsp;</i>" + $(this).find('span')[1].innerText + " &nbsp;|&nbsp; <a class='btn btn-xs btn-primary' href='" + $(this).find('span')[4].innerText + "'>Read More</small>");
 
@@ -212,5 +210,11 @@ $(document).ready(function(){
             });
 
 
-
+            var $grid = $('.grid').imagesLoaded( function() {
+              $grid.masonry({
+                itemSelector: '.grid-item',
+                percentPosition: true,
+                columnWidth: '.grid-sizer'
+              });
+            });
 });
