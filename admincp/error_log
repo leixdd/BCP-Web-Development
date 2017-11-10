@@ -1,0 +1,4 @@
+[20-Jun-2017 17:16:29 UTC] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/cheezdwag0906/public_html/bcp.edu.ph/admincp/modules/addnews.php on line 31
+[23-Jun-2017 07:52:53 UTC] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/cheezdwag0906/public_html/bcp.edu.ph/admincp/modules/addnews.php on line 31
+[27-Jun-2017 03:19:53 UTC] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/cheezdwag0906/public_html/bcp.edu.ph/admincp/modules/addnews.php on line 31
+[27-Jun-2017 09:00:51 UTC] PHP Warning:  file_get_contents(): Filename cannot be empty in /home/cheezdwag0906/public_html/bcp.edu.ph/admincp/modules/addnews.php on line 31

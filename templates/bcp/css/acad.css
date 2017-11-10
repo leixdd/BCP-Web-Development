@@ -1,0 +1,58 @@
+
+
+		@font-face {
+		    font-family: 'lightfont';
+		    src: url("../fonts/RobotoThin.ttf");
+		}
+
+		@font-face {
+		    font-family: 'lighter';
+		    src: url("../fonts/RobotoLight.ttf");
+		}
+
+		@font-face {
+		    font-family: 'Raleway-smb';
+		    src: url("../fonts/Raleway-SemiBold.ttf");
+		}
+
+		@font-face {
+		    font-family: 'Raleway-thin';
+		    src: url("../fonts/Raleway-Thin.ttf");
+		}
+
+		@font-face {
+		    font-family: 'Raleway-reg';
+		    src: url("../fonts/Raleway-Regular.ttf");
+		}
+
+		.card{
+		    border-radius: 6px;
+		    background-color: white;
+		    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+		    transition: 0.3s;
+		}
+
+		.card:hover{
+		    background-color: #2196F3;
+		    color: white;
+		}
+
+		.card:hover .course-text{
+		    color: white;
+		}
+
+		.card-container{
+
+		    padding: 2px 16px;
+		}
+
+		.course-icon{
+		    font-size: 30pt;
+		}
+
+		.course-text{
+		    font-family: lighter;
+		    text-align: middle;
+		}
+
+

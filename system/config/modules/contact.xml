@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<settings>
+	<active>1</active>
+	<subject>Contact us</subject>
+	<contact_enable_recaptcha>1</contact_enable_recaptcha>
+	<contact_subject>Contact us</contact_subject>
+	<contact_recaptcha_public_key>6Len7SgUAAAAAElW2Za559Yj0Gy8FTHo5CxwfmUJ</contact_recaptcha_public_key>
+	<contact_recaptcha_private_key>6Len7SgUAAAAAA7mBfTsxj0mP9yn03RnFWHkd3Yp</contact_recaptcha_private_key>
+</settings>
