@@ -422,7 +422,22 @@ function time_elapsed_string($datetime, $full = false) {
 <div class="container-fluid">
 
   <div class="row">
+    <hr />
     <div class="col-lg-9 col-md-9 col-sm-9">
+
+      <div class="hidden-sm hidden-xs">
+        <h2 style="font-family: Raleway-thin; font-size: 36pt;"><span><img src="<?=__PATH_TEMPLATE__?>img/icons/fb.png" />&nbsp;</span><b style="font-family: Raleway-smb; color: #162c9a">Facebook</b> Updates</h2>
+      </div>
+
+      <div class="visible-sm visible-xs">
+        <div class="text-center">
+          <center>
+            <img src="<?=__PATH_TEMPLATE__?>img/icons/fb.png" />&nbsp;
+          </center>
+          <h2 style="font-family: Raleway-thin; font-size: 36pt;"><b style="font-family: Raleway-smb; color: #162c9a">Facebook</b> Updates</h2>
+        </div>
+      </div>
+
       <!-- <div class="dark-primary-color" style="height: 10px;"></div>
       <div class="default-primary-color text-center">
           <div style="padding-top: 2%; padding-bottom: 2%">
@@ -479,10 +494,22 @@ function time_elapsed_string($datetime, $full = false) {
                               <div class="grid-item">
                                 <div class="overlay-x" style="padding: 10px">
                                   <div style="padding: 10px; border: 2px solid white; height: 100%; color: white;">
-                                    BCP Update - <i class="fa fa-clock-o"></i>&nbsp;<?= $ago_value ?>
-                                    <br />
-                                    <br />
-                                    <?= strip_tags(substr($message, 0, 85)) ?> ...
+                                    <div class="hidden-md hidden-xs hidden-sm">
+                                      <a href="<?= $link ?>" class="btn btn-success btn-xs"><b>Read More</b></a> - <i class="fa fa-clock-o"></i>&nbsp;<?= $ago_value ?>
+                                      <hr />
+                                      <?= strip_tags(substr($message, 0, 75)) ?> ...
+                                      <br />
+                                    </div>
+                                    <div class="visible-md">
+                                      <a href="<?= $link ?>" class="btn btn-success btn-xs"><b>Read More</b></a> - <i class="fa fa-clock-o"></i>&nbsp;<?= $ago_value ?>
+                                      <br />
+                                      <?= strip_tags(substr($message, 0, 45)) ?> ...
+                                    </div>
+                                    <div class="visible-xs visible-sm text-center">
+                                      <a href="<?= $link ?>" class="btn btn-success btn-xs"><b>Read More</b></a>
+                                      <br />
+                                      <i class="fa fa-clock-o"></i>&nbsp;<?= $ago_value ?>
+                                    </div>
                                   </div>
                                 </div>
                                 <?php
@@ -547,8 +574,7 @@ function time_elapsed_string($datetime, $full = false) {
         <div class="row">
             <div class="col-lg-12">
                 <div>
-                    <div class="dark-primary-color" style="height: 10px;"></div>
-                    <div class="default-primary-color text-center">
+                    <div class="text-center" style="background-color: #162c9a">
                         <div style="padding-top: 5%; padding-bottom: 5%">
                             <h3 style="font-family: Raleway-reg; color: white;">
                                 Announcements @ <i><?= date("Y"); ?> </i>
@@ -557,7 +583,7 @@ function time_elapsed_string($datetime, $full = false) {
                         </div>
                     </div>
                     <div style="background: white">
-                          <div class="list-group scrollable-content">
+                          <div class="list-group scrollable-content" style="border-radius: 0 !important;">
                                 <!-- News Loop -->
                                     <?php
                                         $n = new News();
@@ -566,21 +592,20 @@ function time_elapsed_string($datetime, $full = false) {
                                     foreach ($news_data as $news) {
                                             $news_url = __BASE_URL__.'news/'.Encode_id($news['news_id']).'/';
                                             ?>
-                                                    <a href="<?=$news_url;?>" class="list-group-item">
-                                                      <div class="row">
-                                                        <div class="col-lg-4 col-md-4 col-sm-4">
-                                                          <div class="panel panel-primary text-center">
-                                                            <div class="panel-heading">
-                                                              <span style="font-family: Raleway-reg; color: white;" ><?= date("M",$news['news_date']); ?></span>
-                                                            </div>
-                                                            <div class="panel-body">
-                                                              <?= date("j",$news['news_date']); ?>
-                                                            </div>
+                                                    <a href="<?=$news_url;?>" class="list-group-item" style="border-radius: 0 !important;">
+                                                      <div class="media text-center" style="margin: -2%">
+                                                        <div class="media-left">
+                                                          <div style="padding: 10px; background-color: #162c9a; height: 100%; background-size: cover;">
+                                                            <span style="font-family: Raleway-reg; color: white;" ><?= date("M",$news['news_date']); ?></span>
+                                                          </div>
+                                                          <div style="padding: 10px; background-color: #f2f2f2; background-size: cover; height: 100%" class="text-center">
+                                                            <?= date("j",$news['news_date']); ?>
                                                           </div>
                                                         </div>
-                                                        <div class="col-lg-8 col-md-8 col-sm-8">
+                                                        <div class="media-body">
+                                                          <div class="media-heading">
                                                             <h5 class="list-group-item-heading"><?= $news['news_title'] ?></h5>
-                                                            <small class="list-group-item-text"><i class="fa fa-map-marker"></i>&nbsp;<?= $news['news_venue']; ?></small>
+                                                          </div>
                                                         </div>
                                                       </div>
                                                     </a>
