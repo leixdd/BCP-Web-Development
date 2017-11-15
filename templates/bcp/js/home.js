@@ -84,9 +84,6 @@ function removeAllSelected(isXs){
   panels_out();
 }
 
-
-
-
 function panels_out(){
   $('#college-acad').hide();
   $('#shs-acad').hide();
@@ -94,6 +91,18 @@ function panels_out(){
   $('#tesda-acad').hide();
 }
 
+function toggleNavArrow(arrow){
+
+    if(arrow.getAttribute("data-nav-arrow") === 'false'){
+      $(arrow).removeClass('fa-chevron-circle-down');
+      $(arrow).addClass('fa-chevron-circle-up');
+      $(arrow).attr('data-nav-arrow','true');
+    }else{
+      $(arrow).removeClass('fa-chevron-circle-up');
+      $(arrow).addClass('fa-chevron-circle-down');
+      $(arrow).attr('data-nav-arrow','false')
+    }
+}
 
 $(document).ready(function(){
 
@@ -217,4 +226,28 @@ $(document).ready(function(){
                 columnWidth: '.grid-sizer'
               });
             });
+
+
+          // Mobile Navigation - Javascript codes
+          var dmn = false;
+          var nav_arrows = false;
+
+          $('.dropdown-mobile-nav').click(function(){
+            if(!dmn){
+              $(this).removeClass('fa-bars');
+              $(this).addClass('fa-close');
+              dmn = true;
+            }else{
+              $(this).removeClass('fa-close');
+              $(this).addClass('fa-bars');
+              dmn = false;
+            }
+          });
+
+          $('#nav-m-home').click(function(){
+            location.assign($(this).attr('data-home-url'));
+          });
+
+
+
 });

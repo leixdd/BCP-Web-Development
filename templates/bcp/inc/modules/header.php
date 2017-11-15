@@ -1,99 +1,196 @@
 <header>
-            <div id="sticky" class="header hd-c hd-c-text">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4  skewedBg">
-                            <div class="logo" style="margin-bottom: 4%;">
-                                <center>
-                                  <a href="<?=__BASE_URL__?>"><img src="<?=__PATH_TEMPLATE__?>img/logoMd.png" alt="" style="width: 100%;"></a>
-                                </center>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-8 col-sm-8 ">
-                            <div class="nav-menu">
 
-                                <!-- Nav Start -->
-                                <nav >
-                                    <ul>
-                                        <li><a class="ddsys" href="<?=__BASE_URL__?>">Home</a></li>
-                                        <li><a href="#" class="ddsys">About us <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                            <ul>
-                                                <li> <a href="<?=__BASE_URL__?>about/profile/">College Profile</a></li>
-                                                <li> <a href="<?=__BASE_URL__?>about/history/">College History</a></li>
-                                                <li> <a href="<?=__BASE_URL__?>about/goalobj/">Goals &amp; Objective</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#" class="ddsys">Admission <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                            <ul>
-                                                <li><a href="<?=__BASE_URL__?>admission">Admission Requirements</a></li>
-                                                <li><a href="<?=__BASE_URL__?>ep">Enrollment Procedures</a></li>
+  <style>
 
-                                            </ul>
-                                        </li>
-                                        <li><a href="#" class="ddsys">Academic <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                            <ul>
+    .nav-mobile{
+      background-color: #162c9a;
+      color: white !important;
+    }
 
-                                                <li><a href="<?=__BASE_URL__?>academics">College</a></li>
-                                                <li><a href="<?=__BASE_URL__?>shs">Senior High</a></li>
-                                                <li><a href="<?=__BASE_URL__?>collegeoflaw">School of Law</a></li>
+    .nav-mobile-brand{
+      font-size: 24pt;
+      font-family: 'Raleway-reg';
+      padding: 15px 15px 40px 15px;
+    }
 
-                                            </ul>
-                                        </li>
-                                        <li><a class="ddsys" href="<?=__BASE_URL__?>facilities">Facilities</a></li>
-                                    </ul>
-                                </nav>
-                                <!-- Nav End -->
+    .dropdown-mobile-nav{
+      float: right;
+    }
+
+    .nav-mobile-body{
+      background-color: white !important;
+      color: black !important;
+    }
+
+    .nav-mobile-acc-title{
+      font-size: 18pt;
+    }
+
+    #nav-m-acc{
+      padding: 10px 5px 0px 5px !important;
+    }
+
+    #nav-m-acc .panel, #nav-m-acc .panel-heading{
+      border-radius: 0px;
+      border-color: #162c9a;
+    }
+
+    #nav-m-acc .panel-heading{
+      background-color: #162c9a;
+    }
+
+    #nav-m-acc .panel-body .list-group .list-group-item:hover{
+      background-color: #162c9a;
+      color: white !important;
+    }
+
+    .nav-arrows{
+      float: right;
+      font-size: 18pt;
+    }
 
 
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+  </style>
+
+  <div id="sticky" class="header hd-c hd-c-text hidden-xs">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4  skewedBg">
+                  <div class="logo" style="margin-bottom: 4%;">
+                      <center>
+                        <a href="<?=__BASE_URL__?>"><img src="<?=__PATH_TEMPLATE__?>img/logoMd.png" alt="" style="width: 100%;"></a>
+                      </center>
+                  </div>
+              </div>
+              <div class="col-lg-8 col-md-8 col-sm-8 ">
+                  <div class="nav-menu">
+
+                      <!-- Nav Start -->
+                      <nav >
+                          <ul>
+                              <li><a class="ddsys" href="<?=__BASE_URL__?>">Home</a></li>
+                              <li><a href="#" class="ddsys">Admission <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                  <ul>
+                                      <li><a href="<?=__BASE_URL__?>admission">Admission Requirements</a></li>
+                                      <li><a href="<?=__BASE_URL__?>ep">Enrollment Procedures</a></li>
+
+                                  </ul>
+                              </li>
+                              <li><a href="#" class="ddsys">Academic <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                  <ul>
+
+                                      <li><a href="<?=__BASE_URL__?>academics">College</a></li>
+                                      <li><a href="<?=__BASE_URL__?>shs">Senior High</a></li>
+                                      <li><a href="<?=__BASE_URL__?>collegeoflaw">School of Law</a></li>
+
+                                  </ul>
+                              </li>
+                              <li><a href="#" class="ddsys">About us <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
+                                  <ul>
+                                      <li> <a href="<?=__BASE_URL__?>about/profile/">College Profile</a></li>
+                                      <li> <a href="<?=__BASE_URL__?>about/history/">College History</a></li>
+                                      <li> <a href="<?=__BASE_URL__?>about/goalobj/">Goals &amp; Objective</a></li>
+                                      <li> <a href="<?=__BASE_URL__?>facilities">Facilities</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </nav>
+                      <!-- Nav End -->
+
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Mobile start -->
+  <div class="nav-mobile visible-xs">
+    <div class="nav-mobile-brand">
+      <span style="float: left">BCP</span>
+      <i class="fa fa-bars dropdown-mobile-nav" data-target="#nav-m-body" data-toggle="collapse"></i>
+    </div>
+    <div id="nav-m-body" class="nav-mobile-body collapse">
+      <!-- Mobile Accordion -->
+      <div class="panel-group" id="nav-m-acc">
+
+
+        <div class="panel panel-primary">
+          <div class="panel-heading" id="nav-m-home" data-home-url="<?=__BASE_URL__?>">
+            <div class="panel-title">
+              Home
             </div>
-            <!-- Mobile start -->
-            <div class="mobile-menu-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mobile-menu">
-                                <nav id="mobile-nav">
-                                    <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#">About us <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                            <ul>
-                                                <li><a href="#">College Profile</a></li>
-                                                <li><a href="#">College History</a></li>
-                                                <li><a href="#">Goals & Objectives</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Admission <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                            <ul>
-                                                <li><a href="#">Admission Requirements</a></li>
-                                                <li><a href="#">Enrollment Procedures</a></li>
-                                                <li><a href="#">Online Registration</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">Academic <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                            <ul>
-                                                <li><a href="<?=__BASE_URL__?>academics">College</a></li>
-                                                <li><a href="<?=__BASE_URL__?>shs">K-12</a></li>
-                                                <li><a href="<?=__BASE_URL__?>collegeoflaw">College of Law</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#" class="ddsys">Facilities <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                            <ul>
-                                                <li><a href="<?=__BASE_URL__?>mv">MV Campus</a></li>
-                                                <li><a href="<?=__BASE_URL__?>bulacan">Bulacan Campus</a></li>
-                                                <li><a href="<?=__BASE_URL__?>main">Main Campus</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="<?=__BASE_URL__?>contact" class="ddsys">Contact us </a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+          <div class="panel-heading" data-parent="nav-m-acc" data-toggle="collapse" href="#nav-acad">
+            <div class="panel-title">
+              Academic <i class="fa fa-chevron-circle-down nav-arrows" onclick="toggleNavArrow(this)" data-nav-arrow="false"></i>
             </div>
-            <!-- Mobile End -->
-        </header>
+          </div>
+
+          <div id="nav-acad" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="list-group">
+                <a href="<?=__BASE_URL__?>academics" class="list-group-item">
+                  College
+                </a>
+                <a href="<?=__BASE_URL__?>shs" class="list-group-item">
+                  Senior High
+                </a>
+                <a href="<?=__BASE_URL__?>collegeoflaw" class="list-group-item">
+                  School of Law
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading" data-parent="nav-m-acc" data-toggle="collapse" href="#nav-admi">
+            <div class="panel-title">
+              Admission <i class="fa fa-chevron-circle-down nav-arrows" onclick="toggleNavArrow(this)" data-nav-arrow="false"></i>
+            </div>
+          </div>
+
+          <div id="nav-admi" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="list-group">
+                <a href="<?=__BASE_URL__?>admission" class="list-group-item">Admission Requirements</a>
+                <a href="<?=__BASE_URL__?>ep" class="list-group-item">Enrollment Procedures</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading" data-parent="nav-m-acc" data-toggle="collapse" href="#nav-about">
+            <div class="panel-title">
+              About us <i class="fa fa-chevron-circle-down nav-arrows" onclick="toggleNavArrow(this)" data-nav-arrow="false"></i>
+            </div>
+          </div>
+
+          <div id="nav-about" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div class="list-group">
+                <a href="<?=__BASE_URL__?>about/profile/" class="list-group-item">College Profile</a>
+                <a href="<?=__BASE_URL__?>about/history/" class="list-group-item">College History</a>
+                <a href="<?=__BASE_URL__?>about/goalobj/" class="list-group-item">Goals &amp; Objective</a>
+                <a href="<?=__BASE_URL__?>facilities" class="list-group-item">Facilities</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+      <!-- End Mobile Accordion  -->
+    </div>
+  </div>
+  <!-- Mobile End -->
+</header>
