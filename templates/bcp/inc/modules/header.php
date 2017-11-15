@@ -49,15 +49,38 @@
       font-size: 18pt;
     }
 
+    .extend-nav{
+      position: absolute;
+      background-color: rgba(0,0,0, 0.8);
+      background-image: url("../img/banner/pattern.png");
+      background-repeat: repeat;
+      width: 100%;
+      border-bottom: 1px solid #03A9F4;
+    }
 
+    .extend-nav-style{
+      padding: 10px;
+    }
+
+    .extend-nav-head{
+      color: white;
+      font-family: 'Raleway-thin';
+      padding-bottom: 3%;
+      font-size: 15pt;
+    }
+
+    .extend-nav-body{
+      color: white;
+      font-family: 'Raleway-reg'
+    }
 
   </style>
 
-  <div id="sticky" class="header hd-c hd-c-text hidden-xs">
+  <div id="sticky" class="header hd-c hd-c-text .hd-c-height hidden-xs">
       <div class="container-fluid">
           <div class="row">
               <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4  skewedBg">
-                  <div class="logo" style="margin-bottom: 4%;">
+                  <div class="logo">
                       <center>
                         <a href="<?=__BASE_URL__?>"><img src="<?=__PATH_TEMPLATE__?>img/logoMd.png" alt="" style="width: 100%;"></a>
                       </center>
@@ -70,29 +93,29 @@
                       <nav >
                           <ul>
                               <li><a class="ddsys" href="<?=__BASE_URL__?>">Home</a></li>
-                              <li><a href="#" class="ddsys">Admission <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                  <ul>
+                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-admission" class="ddsys nav-ex">Admission <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
+                                  <!-- <ul>
                                       <li><a href="<?=__BASE_URL__?>admission">Admission Requirements</a></li>
                                       <li><a href="<?=__BASE_URL__?>ep">Enrollment Procedures</a></li>
 
-                                  </ul>
+                                  </ul> -->
                               </li>
-                              <li><a href="#" class="ddsys">Academic <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                  <ul>
+                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-academic" class="ddsys nav-ex">Academic <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
+                                  <!-- <ul>
 
                                       <li><a href="<?=__BASE_URL__?>academics">College</a></li>
                                       <li><a href="<?=__BASE_URL__?>shs">Senior High</a></li>
                                       <li><a href="<?=__BASE_URL__?>collegeoflaw">School of Law</a></li>
 
-                                  </ul>
+                                  </ul> -->
                               </li>
-                              <li><a href="#" class="ddsys">About us <span class="nav-arrow"><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                                  <ul>
+                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-aboutus" class="ddsys nav-ex">About us <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
+                                  <!-- <ul>
                                       <li> <a href="<?=__BASE_URL__?>about/profile/">College Profile</a></li>
                                       <li> <a href="<?=__BASE_URL__?>about/history/">College History</a></li>
                                       <li> <a href="<?=__BASE_URL__?>about/goalobj/">Goals &amp; Objective</a></li>
                                       <li> <a href="<?=__BASE_URL__?>facilities">Facilities</a></li>
-                                  </ul>
+                                  </ul> -->
                               </li>
                           </ul>
                       </nav>
@@ -103,6 +126,97 @@
               </div>
           </div>
       </div>
+
+      <div class="extend-nav">
+        <div id="extend-nav-content">
+
+        </div>
+      </div>
+
+      <div id="ex-add" hidden="true">
+        <div class="extend-nav-style">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                <h2 class="extend-nav-head">ADMISSION</h2>
+                <div class="extend-nav-body">
+                    <img src="<?=__PATH_TEMPLATE__?>img/icons/admission.png" width="35%"/>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h2 class="extend-nav-head">TRANSFEREES</h2>
+                <div class="extend-nav-body">
+                  <ol>
+                    <li>Transcript of Record (TOR)</li>
+                    <li>Certificate of Good Moral Character</li>
+                    <li>Honorable Dismissal</li>
+                    <li> NSO birth certificate (Photocopy)</li>
+                    <li>Picture two pieces (1x1)</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h2 class="extend-nav-head">FRESHMEN</h2>
+                <div class="extend-nav-body">
+                  <ol>
+                    <li>Report Card / Form 137</li>
+                    <li>Certificate of Good Moral Character</li>
+                    <li>Picture two pieces (1x1)</li>
+                    <li> NSO birth certificate (Photocopy)</li>
+                  </ol>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex-acad" hidden="true">
+        <div class="extend-nav-style">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
+                <h2 class="extend-nav-head">ADMISSION</h2>
+                <div class="extend-nav-body">
+                    <img src="<?=__PATH_TEMPLATE__?>img/icons/admission.png" width="35%"/>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h2 class="extend-nav-head">TRANSFEREES</h2>
+                <div class="extend-nav-body">
+                  <ol>
+                    <li>Transcript of Record (TOR)</li>
+                    <li>Certificate of Good Moral Character</li>
+                    <li>Honorable Dismissal</li>
+                    <li> NSO birth certificate (Photocopy)</li>
+                    <li>Picture two pieces (1x1)</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h2 class="extend-nav-head">FRESHMEN</h2>
+                <div class="extend-nav-body">
+                  <ol>
+                    <li>Report Card / Form 137</li>
+                    <li>Certificate of Good Moral Character</li>
+                    <li>Picture two pieces (1x1)</li>
+                    <li> NSO birth certificate (Photocopy)</li>
+                  </ol>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
   </div>
   <!-- Mobile start -->
   <div class="nav-mobile visible-xs">

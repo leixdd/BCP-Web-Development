@@ -5,9 +5,7 @@
  -->
 
 
-<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>fonts/material-icons.css">
-<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>css/YTPlayer.min.css">
-<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>css/override.css">
+
 
 <!-- <editor-fold PHP CODE GENERATING FACEBOOK FEEDS> -->
 
@@ -438,15 +436,7 @@ function time_elapsed_string($datetime, $full = false) {
         </div>
       </div>
 
-      <!-- <div class="dark-primary-color" style="height: 10px;"></div>
-      <div class="default-primary-color text-center">
-          <div style="padding-top: 2%; padding-bottom: 2%">
-              <h2 style="font-family: Raleway-reg; color: white;">
-                  Facebook Feeds
-              </h2>
-              <small style="font-family: Raleway-thin; color: white;">Facebook current posts</small>
-          </div>
-      </div> -->
+
       <div style="background: white">
             <div style="overflow-y: scroll; height: 100vh;">
               <div class="grid">
@@ -522,42 +512,6 @@ function time_elapsed_string($datetime, $full = false) {
 
 
                               </div>
-
-
-                                      <!-- <a href="<?= $link ?>" class="list-group-item">
-
-                                        <h5 class="list-group-item-heading">
-                                              BCP Update - <i class="fa fa-clock-o"></i>&nbsp;<?= $ago_value ?>
-                                        </h5>
-                                        <small class="list-group-item-text">
-                                              <?= strip_tags(substr($message, 0, 150)) ?> ...
-                                              <?php
-                                                   if($type=="status"){
-                                                      echo "<div class='text-center'>";
-                                                          echo "View on Facebook";
-                                                      echo "</div>";
-                                                   }else if($type=="photo"){
-                                                      echo "<center>
-                                                      <img src='https://graph.facebook.com/{$object_id}/picture' />
-                                                      </center>";
-                                                   }else{}
-
-                                                     echo "<div class='post-info'>";
-                                                         echo "<div class='post-info-name'>{$name}</div>";
-                                                         echo "<div class='post-info-description'>{$description}</div>";
-                                                     echo "</div>";
-
-                                                     if($picture_url){
-                                                         echo "<div class='post-picture'>";
-                                                             echo "<img src='{$picture_url}' />";
-                                                         echo "</div>";
-                                                     }
-
-
-                                              ?>
-                                        </small>
-                                      </a> -->
-
 
                               <?php
 

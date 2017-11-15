@@ -35,13 +35,14 @@ include('inc/template.functions.php');
 	<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>css/animate.css">
 	<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>css/magnific-popup.css">
 	<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>css/meanmenu.min.css">
+	<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>fonts/material-icons.css">
+	<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>css/override.css">
 
-
-        <script src="https://use.fontawesome.com/ef55715097.js"></script>
+        <script src="https://use.fontawesome.com/ef55715097.js" async></script>
         <link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>css/main.css">
 	<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>css/responsive.css">
 	<link rel="stylesheet" href="<?=__PATH_TEMPLATE__?>style.css">
-	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script src='https://www.google.com/recaptcha/api.js' async></script>
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -60,7 +61,7 @@ include('inc/template.functions.php');
 
 		<!-- Header Top Start -->
 		            <div id="fb-root"></div>
-<script>
+<script async>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '326223631134513',
