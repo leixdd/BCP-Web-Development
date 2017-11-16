@@ -64,6 +64,12 @@
                   </ul>
                 </div>
                 <hr />
+
+
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>admission" class="btn btn-primary btn-sm">ENROLLMENT PROCEDURES &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
                 <div class="extend-nav-body">
                   <ul>
                     <li>
@@ -73,23 +79,6 @@
                     <li>Certificate of Good Moral Character</li>
                     <li>Picture two pieces (1x1)</li>
                     <li> NSO birth certificate (Photocopy)</li>
-                  </ul>
-                </div>
-
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>admission" class="btn btn-primary btn-sm">ENROLLMENT PROCEDURES &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
-                <div class="extend-nav-body">
-                  <ul>
-                    <li>
-                      For Transferee
-                    </li>
-                    <li>Transcript of Record (TOR)</li>
-                    <li>Certificate of Good Moral Character</li>
-                    <li>Honorable Dismissal</li>
-                    <li> NSO birth certificate (Photocopy)</li>
-                    <li>Picture two pieces (1x1)</li>
                   </ul>
                 </div>
               </div>
