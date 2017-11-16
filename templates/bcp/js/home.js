@@ -120,7 +120,7 @@ function toggleNavArrowEx(tarAr) {
 
     'nav-ex-admission': $('#ex-add').html(),
     'nav-ex-academic': $('#ex-acad').html(),
-    'nav-ex-aboutus': '<h1>testing3<h1/>',
+    'nav-ex-aboutus': $('#ex-about').html(),
   };
 
 
@@ -180,7 +180,7 @@ $(document).ready(function() {
   wow.init();
 
   panels_out();
-  $('#college-acad').fadeIn()
+  $('#college-acad').show()
   $('.freshie').click(function() {
     $('.fresh-panel').show();
     $('.oldie-panel').hide();
@@ -198,28 +198,28 @@ $(document).ready(function() {
     $('.academe-text').text("College Programs");
     removeAllSelected(false);
     $(this).addClass("academe-btn-active");
-    $('#college-acad').fadeIn();
+    $('#college-acad').show();
   });
 
   $('#shs').click(function() {
     $('.academe-text').text("K to 12 Programs");
     removeAllSelected(false);
     $(this).addClass("academe-btn-active");
-    $('#shs-acad').fadeIn();
+    $('#shs-acad').show();
   });
 
   $('#sol').click(function() {
     $('.academe-text').text("School of Law");
     removeAllSelected(false);
     $(this).addClass("academe-btn-active");
-    $('#law-acad').fadeIn();
+    $('#law-acad').show();
   });
 
   $('#tesda').click(function() {
     $('.academe-text').text("Tesda Programs");
     removeAllSelected(false);
     $(this).addClass("academe-btn-active");
-    $('#tesda-acad').fadeIn();
+    $('#tesda-acad').show();
     ``
   });
 
@@ -228,28 +228,28 @@ $(document).ready(function() {
     $('.academe-text').text("College Programs");
     removeAllSelected(true);
     $(this).addClass("academe-btn-active");
-    $('#college-acad').fadeIn();
+    $('#college-acad').show();
   });
 
   $('#shsxs').click(function() {
     $('.academe-text').text("K to 12 Programs");
     removeAllSelected(true);
     $(this).addClass("academe-btn-active");
-    $('#shs-acad').fadeIn();
+    $('#shs-acad').show();
   });
 
   $('#solxs').click(function() {
     $('.academe-text').text("School of Law");
     removeAllSelected(true);
     $(this).addClass("academe-btn-active");
-    $('#law-acad').fadeIn();
+    $('#law-acad').show();
   });
 
   $('#tesdaxs').click(function() {
     $('.academe-text').text("Tesda Programs");
     removeAllSelected(true);
     $(this).addClass("academe-btn-active");
-    $('#tesda-acad').fadeIn();
+    $('#tesda-acad').show();
   });
 
   var img = '';

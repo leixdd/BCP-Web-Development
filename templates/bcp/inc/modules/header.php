@@ -1,81 +1,5 @@
 <header>
 
-  <style>
-
-    .nav-mobile{
-      background-color: #162c9a;
-      color: white !important;
-    }
-
-    .nav-mobile-brand{
-      font-size: 24pt;
-      font-family: 'Raleway-reg';
-      padding: 15px 15px 40px 15px;
-    }
-
-    .dropdown-mobile-nav{
-      float: right;
-    }
-
-    .nav-mobile-body{
-      background-color: white !important;
-      color: black !important;
-    }
-
-    .nav-mobile-acc-title{
-      font-size: 18pt;
-    }
-
-    #nav-m-acc{
-      padding: 10px 5px 0px 5px !important;
-    }
-
-    #nav-m-acc .panel, #nav-m-acc .panel-heading{
-      border-radius: 0px;
-      border-color: #162c9a;
-    }
-
-    #nav-m-acc .panel-heading{
-      background-color: #162c9a;
-    }
-
-    #nav-m-acc .panel-body .list-group .list-group-item:hover{
-      background-color: #162c9a;
-      color: white !important;
-    }
-
-    .nav-arrows{
-      float: right;
-      font-size: 18pt;
-    }
-
-    .extend-nav{
-      position: absolute;
-      background-color: rgba(0,0,0, 0.8);
-      background-image: url("../img/banner/pattern.png");
-      background-repeat: repeat;
-      width: 100%;
-      border-bottom: 1px solid #03A9F4;
-    }
-
-    .extend-nav-style{
-      padding: 10px;
-    }
-
-    .extend-nav-head{
-      color: white;
-      font-family: 'Raleway-thin';
-      padding-bottom: 3%;
-      font-size: 15pt;
-    }
-
-    .extend-nav-body{
-      color: white;
-      font-family: 'Raleway-reg'
-    }
-
-  </style>
-
   <div id="sticky" class="header hd-c hd-c-text .hd-c-height hidden-xs">
       <div class="container-fluid">
           <div class="row">
@@ -93,29 +17,9 @@
                       <nav >
                           <ul>
                               <li><a class="ddsys" href="<?=__BASE_URL__?>">Home</a></li>
-                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-admission" class="ddsys nav-ex">Admission <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
-                                  <!-- <ul>
-                                      <li><a href="<?=__BASE_URL__?>admission">Admission Requirements</a></li>
-                                      <li><a href="<?=__BASE_URL__?>ep">Enrollment Procedures</a></li>
-
-                                  </ul> -->
-                              </li>
-                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-academic" class="ddsys nav-ex">Academic <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
-                                  <!-- <ul>
-
-                                      <li><a href="<?=__BASE_URL__?>academics">College</a></li>
-                                      <li><a href="<?=__BASE_URL__?>shs">Senior High</a></li>
-                                      <li><a href="<?=__BASE_URL__?>collegeoflaw">School of Law</a></li>
-
-                                  </ul> -->
-                              </li>
+                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-admission" class="ddsys nav-ex">Admission <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
+                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-academic" class="ddsys nav-ex">Academic <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
                               <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-aboutus" class="ddsys nav-ex">About us <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
-                                  <!-- <ul>
-                                      <li> <a href="<?=__BASE_URL__?>about/profile/">College Profile</a></li>
-                                      <li> <a href="<?=__BASE_URL__?>about/history/">College History</a></li>
-                                      <li> <a href="<?=__BASE_URL__?>about/goalobj/">Goals &amp; Objective</a></li>
-                                      <li> <a href="<?=__BASE_URL__?>facilities">Facilities</a></li>
-                                  </ul> -->
                               </li>
                           </ul>
                       </nav>
@@ -146,27 +50,47 @@
               </div>
 
               <div class="col-lg-4 col-md-4 col-sm-4">
-                <h2 class="extend-nav-head">TRANSFEREES</h2>
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>admission" class="btn btn-primary btn-sm">ADMISSION REQUIREMENTS &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
                 <div class="extend-nav-body">
-                  <ol>
+                  <ul>
+                    <li>
+                      For Transferee
+                    </li>
                     <li>Transcript of Record (TOR)</li>
                     <li>Certificate of Good Moral Character</li>
                     <li>Honorable Dismissal</li>
                     <li> NSO birth certificate (Photocopy)</li>
                     <li>Picture two pieces (1x1)</li>
-                  </ol>
+                  </ul>
                 </div>
-              </div>
-
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <h2 class="extend-nav-head">FRESHMEN</h2>
+                <hr />
                 <div class="extend-nav-body">
-                  <ol>
+                  <ul>
+                    <li>
+                      For Freshmen
+                    </li>
                     <li>Report Card / Form 137</li>
                     <li>Certificate of Good Moral Character</li>
                     <li>Picture two pieces (1x1)</li>
                     <li> NSO birth certificate (Photocopy)</li>
-                  </ol>
+                  </ul>
+                </div>
+
+              </div>
+
+              <div class="col-lg-4 col-md-4 col-sm-4">
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>admission" class="btn btn-primary btn-sm">ENROLLMENT PROCEDURES &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
+                <div class="extend-nav-body">
+                  <ul>
+                    <li>
+                      For Transferee
+                    </li>
+                    <li>Transcript of Record (TOR)</li>
+                    <li>Certificate of Good Moral Character</li>
+                    <li>Honorable Dismissal</li>
+                    <li> NSO birth certificate (Photocopy)</li>
+                    <li>Picture two pieces (1x1)</li>
+                  </ul>
                 </div>
               </div>
 
@@ -180,35 +104,102 @@
           <div class="container">
             <div class="row">
 
-              <div class="col-lg-4 col-md-4 col-sm-4 text-center">
-                <h2 class="extend-nav-head">ADMISSION</h2>
+              <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+                <h2 class="extend-nav-head">ACADEMIC</h2>
                 <div class="extend-nav-body">
-                    <img src="<?=__PATH_TEMPLATE__?>img/icons/admission.png" width="35%"/>
+                    <img src="<?=__PATH_TEMPLATE__?>img/icons/acads.png" width="50%"/>
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <h2 class="extend-nav-head">TRANSFEREES</h2>
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>academics" class="btn btn-primary btn-sm">College &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
                 <div class="extend-nav-body">
-                  <ol>
-                    <li>Transcript of Record (TOR)</li>
-                    <li>Certificate of Good Moral Character</li>
-                    <li>Honorable Dismissal</li>
-                    <li> NSO birth certificate (Photocopy)</li>
-                    <li>Picture two pieces (1x1)</li>
-                  </ol>
+                  <ul>
+                    <li>BS in Information Technology</li>
+                    <li>BS in Library and Information System</li>
+                    <li>BS in Psychology</li>
+                    <li>BS in Criminology</li>
+                    <li>BS in Office Administration</li>
+                    <li>&nbsp;</li>
+                  </ul>
+
                 </div>
               </div>
 
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <h2 class="extend-nav-head">FRESHMEN</h2>
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>shs" class="btn btn-primary btn-sm">K to 12 &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
                 <div class="extend-nav-body">
-                  <ol>
-                    <li>Report Card / Form 137</li>
-                    <li>Certificate of Good Moral Character</li>
-                    <li>Picture two pieces (1x1)</li>
-                    <li> NSO birth certificate (Photocopy)</li>
-                  </ol>
+                  <ul>
+                    <li>Accounting Business & Management</li>
+                    <li>General Academic Strand</li>
+                    <li>Science Technology Engineering & Mathematics</li>
+                    <li>Humanities & Social Sciences</li>
+                    <li>Information & Communication Technology</li>
+                    <li>&nbsp;</li>
+                  </ul>
+
+
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>collegeoflaw" class="btn btn-primary btn-sm">School of Law &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
+                <div class="extend-nav-body">
+                  <p>
+                    The primary purpose of the Law School is to prepare men and women to meet the needs of progressive and modern technology in the various aspects in the practice of law.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="ex-about" hidden="true">
+        <div class="extend-nav-style">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-lg-3 col-md-3 col-sm-3 text-center">
+                <h2 class="extend-nav-head">About Us</h2>
+                <div class="extend-nav-body">
+                    <img src="<?=__PATH_TEMPLATE__?>img/icons/about.png" width="50%"/>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>about/profile" class="btn btn-primary btn-sm">College Profile & History &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
+                <div class="extend-nav-body">
+                  <p>
+                    Bestlink College of the Philippines is a non-stock, non-profit and non-sectarian institute founded in June 2002 in Quezon City. The emergence of 4-Year CHED ladderized programs changed its name from an institute with Computer TESDA-accredited courses to a college.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>about/goalobj" class="btn btn-primary btn-sm">Goals &amp; Objective &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
+                <div class="extend-nav-body">
+                  <p>
+                    BCP’s effort to provide an education which can be man’s tool to be liberated from all forms of ignorance and poverty. Hence, all its academic offerings are relevant tools to empower man to ably use his reason, intellect, and will to confront life’s challenges.
+                  </p>
+                </div>
+              </div>
+
+              <div class="col-lg-3 col-md-3 col-sm-3">
+                <h2 class="extend-nav-head"><a href="<?=__BASE_URL__?>facilities" class="btn btn-primary btn-sm">Contacts &amp; Facilities &nbsp;&nbsp;<span class="fa fa-chevron-circle-right"></span></a></h2>
+                <div class="extend-nav-body">
+                  <ul>
+                    <li>
+                      Email: <a href="mailto:bcp-inquire@bcp.edu.ph?Subject=Hello%20BCP" style="color: #03A9F4;">bcp-inquire@bcp.edu.ph</a>
+                    </li>
+                    <li>
+                      Website: <a href="<?=__BASE_URL__?>" style="color: #03A9F4;">www.bcp.edu.ph</a>
+                    </li>
+                    <li>
+                      Phone: 417 - 4355
+                    </li>
+                  </ul>
                 </div>
               </div>
 

@@ -329,14 +329,26 @@
 .extend-nav-head{
   color: white;
   font-family: 'Raleway-thin';
-  padding-bottom: 3%;
+  padding-bottom: 2%;
   font-size: 15pt;
 }
 
 .extend-nav-body{
   color: white;
   font-family: 'Raleway-reg'
+  padding-bottom: 2%;
 }
+
+.extend-nav-body ul li{
+  font-size: 11pt;
+  padding-bottom: 3%;
+}
+
+.extend-nav-head a{
+  width: 100% !important;
+  font-family: 'Raleway-reg';
+}
+
 
 /* End Navigation */
 
