@@ -112,7 +112,7 @@ function toggleNavArrow(arrow) {
 var fadeT = false;
 var pastEx = '';
 
-function toggleNavArrowEx(tarAr) {
+function toggleNavArrowEx(tarAr, clicked) {
 
 
   // Navigation Extension
@@ -136,14 +136,21 @@ function toggleNavArrowEx(tarAr) {
     pastEx = $(tarAr).attr('id');
     fadeT = true;
   } else {
-    if(pastEx === currentEx){
-      $('.extend-nav').slideUp('fast');
-      pastEx = $(tarAr).attr('id');
-      fadeT = false;
+
+    if(!clicked){
+        pastEx = $(tarAr).attr('id');
+        ResetNavArrowEx();
     }else{
-      pastEx = $(tarAr).attr('id');
-      ResetNavArrowEx();
+      if(pastEx === currentEx){
+        $('.extend-nav').slideUp('fast');
+        pastEx = $(tarAr).attr('id');
+        fadeT = false;
+      }else{
+        pastEx = $(tarAr).attr('id');
+        ResetNavArrowEx();
+      }
     }
+
   }
 
   if (arrow.attr('data-nav-arrow') === 'false') {
@@ -325,7 +332,5 @@ $(document).ready(function() {
 
 
   $('.extend-nav').hide();
-
-
 
 });

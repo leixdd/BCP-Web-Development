@@ -17,9 +17,9 @@
                       <nav >
                           <ul>
                               <li><a class="ddsys" href="<?=__BASE_URL__?>">Home</a></li>
-                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-admission" class="ddsys nav-ex">Admission <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
-                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-academic" class="ddsys nav-ex">Academic <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
-                              <li><a onclick="toggleNavArrowEx(this)" id="nav-ex-aboutus" class="ddsys nav-ex">About us <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
+                              <li onmouseover="toggleNavArrowEx(this, false)" onclick="toggleNavArrowEx(this, true)"  id="nav-ex-admission" class="nav-ex"><a class="ddsys">Admission <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
+                              <li onmouseover="toggleNavArrowEx(this, false)" onclick="toggleNavArrowEx(this, true)"  id="nav-ex-academic" class="nav-ex"><a class="ddsys">Academic <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
+                              <li onmouseover="toggleNavArrowEx(this, false)" onclick="toggleNavArrowEx(this, true)"  id="nav-ex-aboutus"  class="nav-ex"><a class="ddsys">About us <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
                               </li>
                           </ul>
                       </nav>
@@ -63,7 +63,6 @@
                     <li>Picture two pieces (1x1)</li>
                   </ul>
                 </div>
-                <hr />
 
 
               </div>
