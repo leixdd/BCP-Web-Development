@@ -14,7 +14,7 @@
                   <div class="nav-menu">
 
                       <!-- Nav Start -->
-                      <nav >
+                      <nav>
                           <ul>
                               <li><a class="ddsys" href="<?=__BASE_URL__?>">Home</a></li>
                               <li onmouseover="toggleNavArrowEx(this, false)" onclick="toggleNavArrowEx(this, true)"  id="nav-ex-admission" class="nav-ex"><a class="ddsys">Admission <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>

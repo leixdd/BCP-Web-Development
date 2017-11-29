@@ -41,36 +41,6 @@
   width: 100%;
 }
 
-.midBanner {
-  background: url(../img/imgtest/1.jpg) no-repeat;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-}
-
-.midBanner-overlay {
-  background-color: rgba(54, 122, 189, 0.6);
-  height: 100%;
-  width: 100%;
-}
-
-.midBanner-relative {
-  position: relative;
-}
-
-.midBanner-content {
-  position: absolute;
-}
-
-.pausepage-banner {
-  background: url(../img/banner/pausepage.jpg) no-repeat center center fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-}
-
 /*Gradients*/
 
 .grad-w-t {
@@ -220,12 +190,6 @@
   color: black;
 }
 
-.banner {
-  background: url('../img/banner/bg.jpg') no-repeat center center fixed;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-}
 
 .hd-c {
   background-color: #162c9a !important;
@@ -443,24 +407,7 @@
 
 /* end typed.js */
 
-.bgnews {
-  background: url(../img/banner/bg.jpg) no-repeat center center fixed;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-}
 
-
-
-.bgshs1 {
-  background: url(../img/banner/shs1.jpg) no-repeat center center fixed;
-  width: 100%;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-}
 
 .banner-f1 {
   position: absolute;
@@ -815,4 +762,18 @@
 
 .divider-color {
   border-color: #BDBDBD;
+}
+
+
+/* footer */
+
+.footer-list li a{
+  color: white !important;
+  padding-bottom: 5px;
+}
+
+
+.footer-list li a span{
+  color: #03A9F4 !important;
+  padding-bottom: 5px;
 }
