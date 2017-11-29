@@ -1,7 +1,7 @@
 <header>
 
   <div id="sticky" class="header hd-c hd-c-text .hd-c-height hidden-xs">
-      <div class="container-fluid">
+      <div class="container-fluid" id="standard-nav">
           <div class="row">
               <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4  skewedBg">
                   <div class="logo">
@@ -18,7 +18,7 @@
                           <ul>
                               <li><a class="ddsys" href="<?=__BASE_URL__?>">Home</a></li>
                               <li onmouseover="toggleNavArrowEx(this, false)" onclick="toggleNavArrowEx(this, true)"  id="nav-ex-admission" class="nav-ex"><a class="ddsys">Admission <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
-                              <li onmouseover="toggleNavArrowEx(this, false)" onclick="toggleNavArrowEx(this, true)"  id="nav-ex-academic" class="nav-ex"><a class="ddsys">Academic <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
+                              <li onmouseover="toggleNavArrowEx(this, false)" onclick="toggleNavArrowEx(this, true)"  id="nav-ex-academic" class="nav-ex"><a class="ddsys">Programs <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a></li>
                               <li onmouseover="toggleNavArrowEx(this, false)" onclick="toggleNavArrowEx(this, true)"  id="nav-ex-aboutus"  class="nav-ex"><a class="ddsys">About us <span class="nav-arrow"><i class="fa fa-chevron-circle-down" aria-hidden="true" data-nav-arrow="false"></i></span></a>
                               </li>
                           </ul>
@@ -93,7 +93,7 @@
             <div class="row">
 
               <div class="col-lg-3 col-md-3 col-sm-3 text-center">
-                <h2 class="extend-nav-head">ACADEMIC</h2>
+                <h2 class="extend-nav-head">Programs</h2>
                 <div class="extend-nav-body">
                     <img src="<?=__PATH_TEMPLATE__?>img/icons/acads.png" width="50%"/>
                 </div>
@@ -220,7 +220,7 @@
         <div class="panel panel-primary">
           <div class="panel-heading" data-parent="nav-m-acc" data-toggle="collapse" href="#nav-acad">
             <div class="panel-title">
-              Academic <i class="fa fa-chevron-circle-down nav-arrows" onclick="toggleNavArrow(this)" data-nav-arrow="false"></i>
+              Programs <i class="fa fa-chevron-circle-down nav-arrows" onclick="toggleNavArrow(this)" data-nav-arrow="false"></i>
             </div>
           </div>
 

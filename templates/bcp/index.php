@@ -51,10 +51,15 @@ include('inc/template.functions.php');
 	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 </head>
-<body>
+<body onresize="resizeAcad()">
 		<div id="preloader">
-			<!--<div id="status"></div>-->
-			<!-- <div class="loader" id="loader-1"></div> -->
+			<div id="status" >
+				<center>
+					<div class="wow pulse" data-wow-duration="2s" data-wow-iteration="100" style="width: 200px; padding-top: 15%">
+						<img src="<?=__PATH_TEMPLATE__?>img/preloader/SmLogo.png" class="img-responsive"/>
+					</div>
+				</center>
+			</div>
 		</div>
 		<!-- Pre loader -->
 

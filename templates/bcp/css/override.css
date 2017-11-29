@@ -144,17 +144,24 @@
 }
 
 .academe {
-  background-color: #162c9a !important;
-  height: auto;
+  background: url('../img/banner/acadme.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+}
+
+.academe-shs {
+  background: url('../img/banner/bgSHS.jpg') no-repeat center center fixed;
   width: 100%;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
 }
 
 .academe-overlay {
-  background-color: rgba(0, 0, 0, 0.6);
-  background-image: url("../img/banner/pattern.png");
-  background-repeat: repeat;
-  height: 100%;
-  width: 100%;
+  background-color: #162c9a;
 }
 
 .academe-title {
@@ -169,7 +176,7 @@
   padding-bottom: 2%;
   padding-top: 1%;
   font-family: 'Raleway-smb';
-  font-size: 40pt;
+  font-size: 32pt;
 }
 
 .academe-text-btn {
@@ -195,6 +202,10 @@
   border: 2px solid white;
 }
 
+
+.academe-card{
+  background-color: white;
+}
 /*SHS testing*/
 
 .shs-section {
@@ -440,14 +451,7 @@
   -webkit-background-size: cover;
 }
 
-.bgshs {
-  background: url(../img/banner/bg1.jpg) no-repeat center center fixed;
-  width: 100%;
-  background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  -webkit-background-size: cover;
-}
+
 
 .bgshs1 {
   background: url(../img/banner/shs1.jpg) no-repeat center center fixed;
@@ -473,7 +477,7 @@
 }
 
 .banner-overlay {
-  background-color: rgba(44, 62, 80, 0.7);
+  background-color: rgba(22, 44, 154, .8);
   background-image: url("../img/banner/pattern.png");
   background-repeat: repeat;
   height: 100%;
@@ -596,7 +600,7 @@
 
 .scrollable-content {
   overflow-y: scroll;
-  height: 100vh;
+  height: 50vh;
 }
 
 /* ICONS */

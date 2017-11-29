@@ -75,12 +75,10 @@ $(".player").YTPApplyFilters({
 function removeAllSelected(isXs) {
   if (isXs) {
     $('#collxs').removeClass("academe-btn-active");
-    $('#shsxs').removeClass("academe-btn-active");
     $('#solxs').removeClass("academe-btn-active");
     $('#tesdaxs').removeClass("academe-btn-active");
   } else {
     $('#coll').removeClass("academe-btn-active");
-    $('#shs').removeClass("academe-btn-active");
     $('#sol').removeClass("academe-btn-active");
     $('#tesda').removeClass("academe-btn-active");
   }
@@ -90,7 +88,6 @@ function removeAllSelected(isXs) {
 
 function panels_out() {
   $('#college-acad').hide();
-  $('#shs-acad').hide();
   $('#law-acad').hide();
   $('#tesda-acad').hide();
 }
@@ -208,12 +205,6 @@ $(document).ready(function() {
     $('#college-acad').show();
   });
 
-  $('#shs').click(function() {
-    $('.academe-text').text("K to 12 Programs");
-    removeAllSelected(false);
-    $(this).addClass("academe-btn-active");
-    $('#shs-acad').show();
-  });
 
   $('#sol').click(function() {
     $('.academe-text').text("School of Law");
@@ -236,13 +227,6 @@ $(document).ready(function() {
     removeAllSelected(true);
     $(this).addClass("academe-btn-active");
     $('#college-acad').show();
-  });
-
-  $('#shsxs').click(function() {
-    $('.academe-text').text("K to 12 Programs");
-    removeAllSelected(true);
-    $(this).addClass("academe-btn-active");
-    $('#shs-acad').show();
   });
 
   $('#solxs').click(function() {
@@ -333,4 +317,26 @@ $(document).ready(function() {
 
   $('.extend-nav').hide();
 
+  resizeAcad();
 });
+
+
+function resizeAcad(){
+  $('.academe').css('height', $('.academe-overlay').height()+'px');
+
+  var ch = $('.panel-card-shs').height(); //getting first card element
+  $.each($('.panel-card-shs'), function(){
+
+    if($(this).height() > ch){
+      ch = $(this).height();
+    }
+  }); //settings
+
+  $.each($('.panel-card-shs'), function(){
+      $(this).css('height', ch + 'px');
+  }); //generate
+
+
+
+
+}
